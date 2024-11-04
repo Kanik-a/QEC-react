@@ -1,0 +1,79 @@
+/* Collapsible Section Styles */
+.topic {
+    padding: 1rem;
+    background-color: #6643b5;
+    color: white;
+    font-size: 1.875rem;
+    border-radius: 25px;
+    width: 60%; /* Adjusted for better responsiveness */
+    margin-left: 15rem;
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+.faq-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+  
+  
+  
+  
+.collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%; /* Adjusted for better responsiveness */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #6643b5;
+    margin-top: 15px;
+}
+
+.content {
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #6643b5;
+    color: white;
+    border-radius: 25px;
+    width: 90%; /* Adjusted for better responsiveness */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.content.active {
+    display: block;
+    max-height: 1000px;
+}
+
+.active, .collapsible:hover {
+    background-color: #6643b5;
+}
+
+.sign-up{
+    background-color: white; 
+    color: #6643b5; 
+    font-size: 18px; 
+    width: 40%; 
+    align-items: center;
+    padding: 7px 20px;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin-left: 10px; /* Space between the button and other icons */
+    text-decoration: none;
+    display: flex;
+
+}

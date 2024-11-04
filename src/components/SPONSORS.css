@@ -1,0 +1,45 @@
+/* Work With Us Section Styles */
+.logo{
+    
+    position: absolute;
+    top: 0.8rem; /* Adjusted for better spacing */
+    left: 1rem; /* Adjusted for better spacing */
+    z-index: 10;
+    width: 140px;
+    height: 120px;
+}
+.work-with-us-container {
+    padding: 20px;
+    background-color: #6643b5;
+    color: white;
+    font-size: 1.875rem;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 3rem;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work-with-us {
+    background-color: #6643b5;
+    color: white;
+    padding: 20px;
+}
+
+.work-with-us h4 {
+    text-align: center;
+    padding: 10px;
+}
+
+.work-with-us p {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.work-with-us a {
+    font-size: 1rem;
+    color: #6643b5;
+}
+

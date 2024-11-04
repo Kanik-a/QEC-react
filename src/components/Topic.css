@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Website body*/
+.body{
+    
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100%;
+        background-size: cover; /* Adjusted to cover the background */
+        background-repeat: no-repeat;
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-weight: 400;
+        font-style: normal;
+        
+    
+}
+.title{
+    
+    position: relative;
+    display: inline-block;
+}
+.homeHero {
+    width: 100vw;
+    overflow: hidden;
+    padding-top: 0;
+    margin-top: 80px;
+}
+
+.homeHero--inner {
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: center;
+    padding-left: 50px; /* Add padding for better positioning */
+}
+
+.homeHero__title {
+    font-size: 6rem; /* Default font size */
+    line-height: 6rem; /* Default line height */
+    text-align: left;
+    color: transparent;
+    -webkit-text-stroke: 2px #6643b5;
+    -webkit-text-fill-color: white;
+    width: 100%; /* Full width */
+    
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+    font-weight: bold;
+}
+/* media queries for title */
+/* For screens up to 375px */
+@media (max-width: 481px){
+    .homeHero__title {
+        font-size: 2.4rem; /* Reduce font size for small screens */
+        line-height: 2.8rem; /* Adjust line height to match font size */
+        margin-left: 5px; /* Adjust margin for better alignment */
+    }
+}
+
+@media (min-width: 530px) and (max-width: 540px){
+    .homeHero__title {
+        font-size: 2.6rem; /* Reduce font size for small screens */
+        line-height: 2.8rem; /* Adjust line height to match font size */
+        margin-left: 5px; /* Adjust margin for better alignment */
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 821px){
+    .homeHero__title {
+        font-size: 3.2rem; /* Reduce font size for small screens */
+        line-height: 2.8rem; /* Adjust line height to match font size */
+        margin-left: 5px; /* Adjust margin for better alignment */
+    }
+}
+
+@media(max-width: 361px){
+    .homeHero__title {
+        font-size: 2.4rem; /* Reduce font size for small screens */
+        line-height: 2.8rem; /* Adjust line height to match font size */
+        margin-left: 3px;/* Adjust margin for better alignment */
+    }
+
+}
+/* End of title media queries*/
+
+.homeHero__title div {
+    transition: opacity 1.5s ease, transform 1.5s ease, color 0.5s ease, -webkit-text-stroke 0.5s ease;
+}
+
+.homeHero__title div:hover {
+    color: white;
+    -webkit-text-stroke: 2px #6643b5;
+}
+.homeHero__clips {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 35px;
+	object-fit: cover;
+	display: block;
+	-webkit-clip-path: circle(50%);
+	clip-path: circle(50%);
+	z-index: 10;
+	mix-blend-mode: exclusion;
+}
+
+.cb-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999999;
+    contain: layout style size;
+    pointer-events: none;
+    will-change: transform;
+    transition: opacity 1s,color .4s;
+}
+.cb-cursor-text {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+    text-align: center;
+    letter-spacing: -.01em;
+    transition: opacity 1s,transform .3s,-webkit-transform .3s,-moz-transform .3s,-o-transform .3s;
+}
+.cb-cursor.-video{
+    z-index: 9;
+    mix-blend-mode: exclusion;
+}
+
+.cb-cursor-video {
+    transform: scale(0);
+    opacity: 1;
+    transition: opacity 1s,-webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out,opacity 1s;
+    transition: transform .3s ease-in-out,opacity 1s,-webkit-transform .3s ease-in-out,-moz-transform .3s ease-in-out,-o-transform .3s ease-in-out;
+}
+.cb-cursor.-video .cb-cursor-video{
+    opacity: 1;
+    transform: scale(1);
+}
+.cb-cursor #reel-clips {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: -175px;
+    left: -175px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: block;
+    -webkit-clip-path: circle(28%);
+    clip-path: circle(28%);
+}
+
+@media (max-width: 480px){ /* removing animation for phone screen */
+    .cb-cursor #reel-clips{
+        width: 0px;
+        height: 0px;
+    }
+}
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #6643b5;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Email Box Styles */
+.email-box {
+    background-color: white;
+    border-radius: 25px;
+    width: 60%; /* Adjusted for better responsiveness */
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto; /* Centered and adjusted margins */
+    color: #6643b5;
+}
+/* End*/
+.logo {
+    position: sticky;
+    top: 0.8rem; /* Adjusted for better spacing */
+    left: 1rem; /* Adjusted for better spacing */
+    z-index: 10;
+    width: 140px;
+    height: 120px;
+}
+@media (max-width: 769px){ 
+    .logo{
+        left: 0.5rem;
+        width: 7rem;
+        height: 7rem;
+        top: 0.5rem;
+
+    }
+}
+
+@media (max-width: 480px ) {
+    .logo{
+        left: 0.2rem;
+        top: 0.2rem;
+        width: 7rem;
+        height: 7rem;
+
+    }
+}
+
+@media (max-width: 414px){
+    .logo{
+        left: 0.1rem ;
+        height: 5rem;
+        top: 0.2rem;
+        width: 7rem;
+        height: 7rem;
+
+    }
+}
+
+@media (max-width: 391px){
+    .logo{
+        left: 0.1rem ;
+        height: 6rem;
+        top: 0.2rem;
+        width: 6rem;
+
+    }
+}
+@media (max-width: 361px){
+    .logo{
+        left: 0.1rem ;
+        height: 5rem;
+        top: 0.2rem;
+        width: 5rem;
+
+    }
+}
+
+@media (max-width: 853){
+    .logo{
+        left: 0.1rem ;
+        height: 4rem;
+        top: 0.2rem;
+        width: 4rem;
+
+    }
+}
+.header-links {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    position: absolute; /* Fixed position to stay at the top */
+    top: 20px;
+    right: 100px;
+    gap: 15px; /* Space between items */
+    justify-content: center;
+}
+
+.insta, .linkedin, .engineering {
+    color: #6643b5;
+    font-size: 40px; /* Adjust font size for icons */
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    right: 60px;
+   
+}
+.insta ion-icon, .linkedin ion-icon {
+    font-size: 100%; /* Ensure icons scale properly */
+}
+
+.engineering img {
+    height: 35px;
+    width: 35px;
+}
+
+/* Styling for sign-up button */
+.btn-primary{
+    background-color: #6643b5;
+}
+.btn.sign-up {
+    background-color: #6643b5 !important; /* Force the purple color */
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+
+/* Overlay Menu */
+.wrapper {
+    position: fixed; /* Fixed to cover entire viewport */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-135deg, #6643b5, white);
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+
+#active:checked ~ .wrapper {
+    clip-path: circle(75%);
+}
+
+.menu-btn {
+    position: fixed; /* Fixed to stay in view */
+    right: 1.3rem;
+    top: 1.2rem;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 50%;
+    font-size: 1.25rem; /* Responsive font size */
+    
+    cursor: pointer;
+    background: linear-gradient(-135deg, #6643b5);
+    transition: all 0.3s ease-in-out;
+    z-index: 101; /* Ensure it appears above the wrapper */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#active:checked ~ .menu-btn {
+    background: #fff;
+    color: #ffe79a;
+}
+
+#active:checked ~ .menu-btn i:before {
+    content: "\f00d"; /* Icon change */
+}
+
+.wrapper ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    white-space: nowrap;
+    
+}
+
+.wrapper ul li {
+    margin: 1rem 0; /* Responsive margin */
+   
+}
+
+.wrapper ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.875rem; /* Responsive font size */
+    font-weight: 500;
+    padding: 0.3125rem 1.875rem;
+    position: relative;
+    line-height: 3.5rem; /* Consistent line height */
+    transition: all 0.3s ease;
+    
+}
+
+.wrapper ul li a:after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 2.5rem;
+    left: 0;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover:after {
+    transform: scaleY(1);
+}
+
+.wrapper ul li a:hover {
+    color: #6643b5;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Media query to adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .header-links {
+        right: 100px; /* Adjusted positioning for smaller screens */
+        gap: 20px; /* Further reduce space between items */
+        flex-wrap: wrap; /* Allow items to wrap on small screens */
+    }
+    
+    .insta, .linkedin, .engineering {
+        font-size: 25px; /* Smaller icons on smaller screens */
+        height: 25px;
+        width: 25px;
+    }
+    
+    .sign-up {
+        font-size: 12px; /* Smaller text on smaller screens */
+        padding: 4px 10px;
+    }
+    
+    .menu-btn {
+        height: 3rem;
+        width: 3rem;
+        font-size: 0.875rem;
+        right: 1.3rem;
+        top: 1.2rem;
+    }
+    
+    .wrapper ul li a {
+        font-size: 1.25rem; /* Smaller text for menu items */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-links {
+        right: 100px; /* Further adjust positioning */
+        gap: 15px; /* Minimal space between items */
+        flex-wrap: wrap; /* Allow items to wrap on small screens */
+    }
+    
+    .insta, .linkedin, .engineering {
+        font-size: 20px; /* Further reduce icons for very small screens */
+        height: 20px;
+        width: 20px;
+    }
+    
+    .sign-up {
+        font-size: 10px; /* Further reduce text size */
+        padding: 3px 8px;
+    }
+    
+    .menu-btn {
+        height: 3rem;
+        width: 3rem;
+        font-size: 0.75rem;
+        right: 1.3rem;
+        top: 1.2rem;
+    }
+    
+    .wrapper ul li a {
+        font-size: 1rem; /* Further reduce text size */
+    }
+}
+
+
+/* About Section */
+
+.about {
+    padding: 2rem;
+    margin: 0 2rem;
+    background: #6643b5;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem; /* Responsive font size */
+    line-height: 2.5rem;
+    border-radius: 1.5625rem;
+    margin-left: 55px;
+}
+
+
+
+.about h2 {
+    font-size: 2rem; /* Responsive font size */
+    margin-bottom: 1rem;
+}
+
+.about p {
+    max-width: 90%; /* Responsive max-width */
+    margin: 0 auto;
+    font-size: 1.125rem; /* Responsive font size */
+    line-height: 1.75rem;
+}
+
+/* Media queries for about section*/
+@media ( max-width: 481px){
+    .about{
+        margin-left: 40px;
+    }
+}
+@media (max-width: 391px){
+    .about{
+        margin-left: 35px;
+    }
+}
+
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flip Card Styles */
+.flip-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: 50px;
+}
+
+@media (max-width: 375px){
+    .flip-card-container{
+        margin-left: 35px;
+    }
+}
+@media (max-width: 390px){
+    .flip-card-container{
+        margin-left: 35px;
+    }
+}
+@media (max-width: 360px){
+    .flip-card-container{
+        margin-left: 35px;
+    }
+}
+@media (max-width: 414px){
+    .flip-card-container{
+        margin-left: 35px;
+    }
+}
+
+.flip-card {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    border-radius: 25px; /* Reduced to avoid excessive rounding */
+    overflow: hidden;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 25px; /* Consistent border radius */
+    font-size: 0.7rem; /* Adjusted for better readability */
+    line-height: 1.8rem;
+}
+
+
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+
+
+.flip-card-front {
+    background-color: white;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #6643b5;
+    color: white;
+    transform: rotateY(180deg);
+    
+}
+
+.flip-card-heading {
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    
+   
+}
+
+.flip-card-heading h3 {
+    margin: 0;
+    font-size: 1.25rem; /* Adjusted for readability */
+    color: white;
+    background-color: #6643b5;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.img-configure{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px
+}

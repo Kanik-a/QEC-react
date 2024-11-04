@@ -1,0 +1,110 @@
+
+
+.logo {
+    position: absolute;
+    top: 0.8rem; /* Adjusted for better spacing */
+    left: 1rem; /* Adjusted for better spacing */
+    z-index: 10;
+    width: 140px;
+    height: 120px;
+}
+.member-section-container{
+    display: flex;
+    flex-direction: column;
+}
+.info-position{
+    margin-top: 20px;
+    line-height: 40px;
+}
+.team-topic {
+    padding: 1.5rem;
+    background-color: #6643b5;
+    color: white;
+    font-size: 2rem;
+    border-radius: 25px;
+    width: 80%; /* Adjusted for better responsiveness */
+    margin-left: 15rem;
+    margin-top: 9rem;
+    text-align: center;
+    font-weight: bold;
+}
+.member-topic {
+    padding: 1rem;
+    background-color: #6643b5;
+    color: white;
+    font-size: 1.875rem;
+    border-radius: 25px;
+    width: 40%; /* Adjusted for better responsiveness */
+    margin-left: 22rem;
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/* Container Styles */
+.grid-container {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-gap: 10px; /* Gap between grid items */
+    padding: 10px;
+    
+}
+/* Center Container Styles */
+.center-container {
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    gap: 40px; /* Space between items */
+    grid-column: 1 / -1; /* Span full width of the grid */
+    padding: 40px;
+}
+
+/* Center Item Styles */
+.center-item {
+    background-image: linear-gradient(
+        rgba(102, 67, 181, 0.6),
+        rgba(102, 67, 181, 0.6)
+    ), url('src/components/media/background.png');
+    color: white;
+    border: 1px solid #ddd;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: small;
+    max-height: 420px;
+    font-weight: bold;
+    width: 330px; /* Fixed width */
+}
+
+/* Item Styles */
+.grid-item {
+
+    background-image: linear-gradient(
+        rgba(102, 67, 181, 0.6), /* Starting color with transparency */
+        rgba(102, 67, 181, 0.6)  /* Ending color with transparency */
+      ), url('src/components/media/background.png');
+    
+    color: white; /* Text color */
+    border: 1px solid #ddd; /* Border */
+    padding: 40px; /* Padding inside items */
+    text-align: center; /* Center text */
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: small;
+    max-height: 420px;
+    font-weight: bold;
+    width: 330px;
+    
+
+}
+.team-image{
+    width: 70%;
+    height: 65%;
+    border-radius: 15%;
+    padding-top: 20px;
+    z-index: 100;
+    
+}
